@@ -33,8 +33,8 @@ func init() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	queries = append(queries, Query{ID: "1", Isbn: "438227", Prompt: "White shirt", Seed: "39"})
-	queries = append(queries, Query{ID: "2", Isbn: "438227", Prompt: "Blue elephant", Seed: "239"})
+	queries = append(queries, Query{ID: "1", Prompt: "White shirt", Seed: "39"})
+	queries = append(queries, Query{ID: "2", Prompt: "Blue elephant", Seed: "239"})
 
 	InfoLogger = log.New(file, "INFO: ", log.Ldate|log.Ltime|log.Lshortfile)
 	WarningLogger = log.New(file, "WARNING: ", log.Ldate|log.Ltime|log.Lshortfile)

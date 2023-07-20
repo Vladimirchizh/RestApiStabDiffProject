@@ -1,16 +1,26 @@
 package queries
 
+import (
+	"math/rand"
+	"time"
+)
+
 type Query struct {
-	ID             string `json:"id" bson:"_id.omitempty"`
-	Isbn           string `json:"isbin" bson:"isbn"`
-	Prompt         string `json:"prompt" bson:"prompt"`
-	NegativePrompt string `json:"negative_prompt" bson:"negative_prompt"`
-	Seed           string `json:"seed" bson:"seed"`
-	NumberOfImages string `json:"number_of_images" bson:"number_of_images"`
+	ID             int       `json:"id"`
+	Prompt         string    `json:"prompt"`
+	NegativePrompt string    `json:"negative_prompt"`
+	Seed           string    `json:"seed"`
+	NumberOfImages string    `json:"number_of_images"`
+	Timestamp      time.Time `json:"timestamp"`
 }
-type CreateQuery struct {
-	Prompt         string `json:"prompt"`
-	NegativePrompt string `json:"negative_prompt"`
-	Seed           string `json:"seed"`
-	NumberOfImages string `json:"number_of_images"`
+
+func NewQuery(prompt string, negative string, seed string, nOfImages string) *Query {
+	return &Query{
+		ID:             rand.Intn(1000000),
+		Prompt:         prompt,
+		NegativePrompt: negative,
+		Seed:           seed,
+		NumberOfImages: nOfImages,
+		Timestamp:      time.Now().UTC(),
+	}
 }
