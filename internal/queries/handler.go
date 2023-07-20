@@ -18,13 +18,13 @@ var (
 	// ErrorLogger   *log.Logger
 )
 
-type Query struct {
+/*type Query struct {
 	ID     string `json:"id"`
 	Isbn   string `json:"isbin"`
 	Prompt string `json:"prompt"`
 	Seed   string `json:"seed"`
 }
-
+*/
 type handler struct {
 }
 

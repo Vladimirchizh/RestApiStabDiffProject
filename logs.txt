@@ -1,0 +1,12 @@
+INFO: 2023/02/12 21:27:48 app.go:108: Starting server at port 8000
+
+INFO: 2023/02/12 21:31:23 app.go:108: Starting server at port 8000
+
+WARNING: 2023/02/12 21:34:34 app.go:70: Item with id %s was deleted {2 438227 Blue elephant 239}
+INFO: 2023/02/12 21:35:14 app.go:57: New item inserted: %s {1 438227 White shirt 39}
+INFO: 2023/02/15 17:29:29 handler.go:45: Starting server at port 8000
+
+INFO: 2023/02/15 17:30:42 handler.go:110: New item inserted:  {8498081 438227 White shirt 39}
+INFO: 2023/07/19 18:19:23 handler.go:45: Starting server at port 8000
+
+WARNING: 2023/07/19 18:26:29 handler.go:86: Item was deleted, ID:  1
